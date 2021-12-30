@@ -57,6 +57,8 @@ Install the dependencies:
 
 ```bash
 
+npm i -g @nestjs/cli
+
 npm install
 
 ```
