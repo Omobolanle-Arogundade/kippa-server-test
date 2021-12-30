@@ -14,6 +14,10 @@ import { CalculateServerDto } from './dto/app.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  /**
+   *
+   * @returns {String}
+   */
   @Get()
   getServerName(): string {
     return this.appService.getServerName();

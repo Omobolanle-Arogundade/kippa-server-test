@@ -18,29 +18,29 @@ export class ServerDto {
   @IsNotEmpty()
   @IsNumber()
   @IsPositive()
-  CPU: number;
+  public CPU: number;
 
   @IsNotEmpty()
   @IsNumber()
   @IsPositive()
-  RAM: number;
+  public RAM: number;
 
   @IsNotEmpty()
   @IsNumber()
   @IsPositive()
-  HDD: number;
+  public HDD: number;
 }
 
 export class CalculateServerDto {
   @ValidateNested({ each: true })
   @IsNotEmpty()
   @Type(() => ServerDto)
-  server: ServerDto;
+  public server: ServerDto;
 
   @IsArray()
   @ValidateNested({ each: true })
   @IsNotEmpty()
   @ArrayMinSize(1)
   @Type(() => ServerDto)
-  vms: ServerDto[];
+  public vms: ServerDto[];
 }
